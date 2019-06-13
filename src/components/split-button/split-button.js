@@ -1,3 +1,5 @@
+// File to be removed after MultiActionButton refactor.
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -6,25 +8,6 @@ import Button from '../button';
 import { validProps } from '../../utils/ether';
 import './split-button.scss';
 
-/**
- * A SplitButton widget.
- *
- * == How to use a SplitButton in a component:
- *
- * In your file
- *
- *   import SplitButton from 'react-carbon/lib/components/split-button';
- *
- * To render a SplitButton (developer can add any buttons to dropdown):
- *
- *   <SplitButton text="Main Button" onClick={clickHandler}>
- *     <Button onClick="buttonClickHandler1">Button name 1</Button>
- *     <Button onClick="buttonClickHandler2">Button name 2</Button>
- *   </SplitButton>
- *
- * @class SplitButton
- * @constructor
- */
 class SplitButton extends React.Component {
   static propTypes = {
     /**
@@ -78,18 +61,12 @@ class SplitButton extends React.Component {
   state = {
     /**
      * Tracks whether the additional buttons should be visible.
-     *
-     * @property showAdditionalButtons
-     * @type {Boolean}
-     * @default false
      */
     showAdditionalButtons: false
   }
 
   /**
    * Shows the additional buttons.
-   *
-   * @method showButtons
    */
   showButtons = () => {
     this.setState({ showAdditionalButtons: true });
@@ -97,8 +74,6 @@ class SplitButton extends React.Component {
 
   /**
    * Hides additional buttons.
-   *
-   * @method hideButtons
    */
   hideButtons = () => {
     this.setState({ showAdditionalButtons: false });
@@ -106,9 +81,6 @@ class SplitButton extends React.Component {
 
   /**
    * Returns classes for the component.
-   *
-   * @method mainClasses
-   * @return {String} Main className
    */
   get mainClasses() {
     return classNames(
@@ -122,9 +94,6 @@ class SplitButton extends React.Component {
 
   /**
    * Returns classes for the additional actions.
-   *
-   * @method mainClasses
-   * @return {String} Main className
    */
   get additionalButtonsClasses() {
     return classNames(
@@ -137,9 +106,6 @@ class SplitButton extends React.Component {
 
   /**
    * Returns classes for toggle button.
-   *
-   * @method mainClasses
-   * @return {String} Main className
    */
   get toggleButtonClasses() {
     return 'carbon-split-button__toggle';
@@ -147,9 +113,6 @@ class SplitButton extends React.Component {
 
   /**
    * Returns props for the main button.
-   *
-   * @method mainButtonProps
-   * @return {Object}
    */
   get mainButtonProps() {
     const { ...props } = validProps(this);
@@ -160,9 +123,6 @@ class SplitButton extends React.Component {
 
   /**
    * Returns props for the toggle.
-   *
-   * @method toggleButtonProps
-   * @return {Object}
    */
   get toggleButtonProps() {
     const opts = {
@@ -181,9 +141,6 @@ class SplitButton extends React.Component {
 
   /**
    * Returns the data tags for the component.
-   *
-   * @method componentTags
-   * @return {Object}
    */
   componentTags() {
     return {
@@ -195,9 +152,6 @@ class SplitButton extends React.Component {
 
   /**
    * Returns the HTML for the main button.
-   *
-   * @method renderMainButton
-   * @return {Object}
    */
   get renderMainButton() {
     return (
@@ -215,9 +169,6 @@ class SplitButton extends React.Component {
 
   /**
    * Returns the HTML for the additional buttons.
-   *
-   * @method renderAdditionalButtons
-   * @return {Object}
    */
   get renderAdditionalButtons() {
     return (
@@ -227,10 +178,6 @@ class SplitButton extends React.Component {
     );
   }
 
-  /**
-   * @method render
-   * @return {Object}
-   */
   render() {
     return (
       <div

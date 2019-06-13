@@ -32,6 +32,11 @@ const OptionsHelper = {
     'white'
   ],
 
+  buttonIconPositions: [
+    'before',
+    'after'
+  ],
+
   colors: [
     'default',
     'error',
@@ -39,6 +44,18 @@ const OptionsHelper = {
     'info',
     'maintenance',
     'new',
+    'success',
+    'warning'
+  ],
+
+  toast: [
+    'success',
+    'error'
+  ],
+
+  messages: [
+    'info',
+    'error',
     'success',
     'warning'
   ],
@@ -94,6 +111,8 @@ const OptionsHelper = {
     'edit',
     'edited',
     'email',
+    'ellipsis_horizontal',
+    'ellipsis_vertical',
     'error',
     'favourite',
     'favourite_lined',
@@ -129,6 +148,7 @@ const OptionsHelper = {
     'people',
     'person',
     'phone',
+    'play',
     'plus',
     'print',
     'progressed',
@@ -149,6 +169,7 @@ const OptionsHelper = {
     'unlocked',
     'upload',
     'uploaded',
+    'video',
     'view',
     'warning',
     'white-tick'
@@ -213,6 +234,14 @@ const OptionsHelper = {
     'complete',
     'current',
     'incomplete'
+  ],
+
+  buttonTypes: [
+    'primary',
+    'secondary',
+    'tertiary',
+    'destructive',
+    'darkBackground'
   ],
 
   themesBinary: [
