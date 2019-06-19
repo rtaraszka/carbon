@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link as RouterLink } from 'react-router';
-import Icon from '../icon';
+import Icon from '../icon/icon';
 import StyledButton, { StyledButtonSubtext } from './button.style';
-import tagComponent from '../../utils/helpers/tags';
-import OptionsHelper from '../../utils/helpers/options-helper';
+import tagComponent from '../../utils/helpers/tags/tags';
+import OptionsHelper from '../../utils/helpers/options-helper/options-helper';
 
 const Button = (props) => {
   const { disabled, to, iconType } = props;
